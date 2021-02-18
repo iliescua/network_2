@@ -13,7 +13,6 @@ GPIO.setmode(GPIO.BCM)
 outputs = [6, 26, 12, 21, 4, 13, 20]
 GPIO.setup(outputs, GPIO.OUT)
 
-
 mysocket.listen()
 
 while True:
@@ -25,7 +24,7 @@ while True:
             if not request:
                 print('Client Disconnected')
                 break
-            print('Recieved: ' + request.decode("utf-8") + ' From: ' + addr[0] + ' Port: ' + str(addr[1]))
+            print('Recieved: ' + request.decode("utf-8") + 'From: ' + addr[0] + ' Port: ' + str(addr[1]))
             # Parse file request 
             word = request.decode("utf-8")
             wordParse = word.split(" ")
